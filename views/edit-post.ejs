@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<h1>Edit blog</h1>
+<form action="/update-post" method="POST">
+    <ul>
+        <li>
+            <label for="title">Blog title</label>
+            <input type="text" id="title" name="title" value="<%= post.title %>">
+        </li>
+        <li>
+            <label for="description">Blog description</label>
+            <textarea name="description" id="description"><%= post.description %></textarea>
+        </li>
+        <li>
+            <button type="submit" class="btn-primary" name="originalTitle" value="<%= post.title %>">Submit</button>
+        </li>
+    </ul>
+</form>

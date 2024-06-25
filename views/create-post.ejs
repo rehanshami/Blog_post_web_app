@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<h1>Create new post</h1>
+<form action="/" method="POST">
+    <ul>
+        <li>
+            <label for="title">Blog title</label>
+            <input type="text" id="title" name="title">
+        </li>
+        <li>
+            <label for="description">Blog description</label>
+            <textarea name="description" id="description"></textarea>
+        </li>
+        <li>
+            <button type="submit" class="btn-primary">Submit</button>
+        </li>
+    </ul>
+</form>

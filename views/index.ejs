@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<h1>Blog posts</h1>
+<div class="container">
+    <% posts.forEach(post => { %>
+        <div class="card">
+            <h2><%= post.title %></h2>
+            <p><%=post.dateCreated.toLocaleDateString() %></p>
+            <p><%= post.description.substring(0, 50) %></p>
+            <div class="card-actions">
+                <form action="/posts/<%= encodeURIComponent(post.title) %>">
+                    <button class="btn-primary">Read more</button>
+                </form>
+                <form action="/edit-post" method="POST">
+                    <button class="btn-secondary" value="<%= post.title %>" name="postTitle">Edit blog</button>
+                </form>    
+                <form action="/delete-post" method="POST">
+                    <button class="btn-tertiary" value="<%= post.title %>" name="postTitle">Delete blog</button>
+                </form>
+            </div>
+        </div>
+   <% }); %>
+
+</div>
