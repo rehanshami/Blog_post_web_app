@@ -4,11 +4,11 @@
     <ul>
         <li>
             <label for="title">Blog title</label>
-            <input type="text" id="title" name="title" value="<%= post.title %>">
+            <input type="text" id="title" name="title" required value="<%= post.title %>">
         </li>
         <li>
             <label for="description">Blog description</label>
-            <textarea name="description" id="description"><%= post.description %></textarea>
+            <textarea name="description" id="description" required><%= post.description %></textarea>
         </li>
         <li>
             <button type="submit" class="btn-primary" name="originalTitle" value="<%= post.title %>">Submit</button>
